@@ -8,10 +8,18 @@ This is same as the prisma:1.34.8 image, except this has a wait-for-it script wa
 
 > This might be deprecated in near future.
 
-```
-ARG DB_HOST
-ARG DB_PORT
-ARG WAIT_TIMEOUT=0
+```yml
+version: '3.7'
+services:
+  prisma:
+    image: automatio/prisma:1.34.8
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      WAIT_TIMEOUT: 0
+      PRISMA_CONFIG: |
+        port: 4466
+        ...
 ```
 
 ## automatio/node:14.5.0-slim
