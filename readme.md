@@ -27,6 +27,6 @@ services:
 This is same as node:14.5.0-slim image, except has build-essential and dumb-init packages installed for production usage.
 
 
-## automatio/xvfb:14.5.0-slim
+## automatio/xvfb:14.15.1-buster-slim
 
-This is same as node:14.5.0-slim image, except has build-essential and dumb-init packages, as well as many packages and fonts required for running chromium in xvfb.
+This is same as node:14.15.1-buster-slim image, except has build-essential and dumb-init packages, as well as many packages and fonts required for running chromium in xvfb.
