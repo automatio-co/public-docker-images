@@ -12,3 +12,7 @@ services:
     image: automatio/xvfb:14.16.1-buster-slim
     build:
       context: xvfb
+  puppeteer:
+    image: automatio/xvfb-puppeteer:8.0.0
+    build:
+      context: puppeteer

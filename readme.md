@@ -30,3 +30,8 @@ This is same as node:14.16.1-slim image, except has build-essential and dumb-ini
 ## automatio/xvfb:14.16.1-buster-slim
 
 This is same as node:14.16.1-buster-slim image, except has build-essential and dumb-init packages, as well as many packages and fonts required for running chromium in xvfb.
+
+
+## automatio/xvfb-puppeteer:8.0.0
+
+This is same as automatio/xvfb:14.16.1-buster-slim image, but it also has Chromium for the indicated puppeteer version, located at `/usr/bin/chromium-browser`
