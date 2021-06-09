@@ -2,7 +2,7 @@ FROM automatio/xvfb:14.16.1-buster-slim
 
 WORKDIR /opt
 
-RUN YARN_CACHE_FOLDER=/tmp/yarn_cache yarn add puppeteer@8.0.0 && \
+RUN YARN_CACHE_FOLDER=/tmp/yarn_cache yarn add puppeteer@10.0.0 && \
     yarn cache clean && \
     rm -rf /tmp/yarn_cache && \
     rm -rf /usr/local/share/.cache && \
