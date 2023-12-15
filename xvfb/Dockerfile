@@ -1,4 +1,4 @@
-FROM node:14.16.1-buster-slim
+FROM node:20.10.0-buster-slim
 
 # Install XVFB dependencies
 RUN --mount=type=cache,target=/var/cache/apt \
@@ -11,7 +11,7 @@ RUN --mount=type=cache,target=/var/cache/apt \
     fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget xvfb x11vnc x11-xkb-utils xfonts-100dpi \
     xfonts-75dpi xfonts-scalable xfonts-cyrillic x11-apps dumb-init telnet curl
 
-ENV PNPM_VERSION 6.7.4
+ENV PNPM_VERSION 8.12.1
 RUN curl -sL https://unpkg.com/@pnpm/self-installer | node
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]

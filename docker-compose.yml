@@ -1,14 +1,14 @@
 version: '3.8'
 services:
   node:
-    image: automatio/node:14.16.1-slim
+    image: automatio/node:20.10.0-buster-slim
     build:
       context: node
   xvfb:
-    image: automatio/xvfb:14.16.1-buster-slim
+    image: automatio/xvfb:20.10.0-buster-slim
     build:
       context: xvfb
   puppeteer:
-    image: automatio/xvfb-puppeteer:10.0.0
+    image: automatio/xvfb-puppeteer:21.5.2
     build:
       context: puppeteer

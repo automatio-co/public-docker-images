@@ -1,12 +1,12 @@
-FROM automatio/xvfb:14.16.1-buster-slim
+FROM automatio/xvfb:20.10.0-buster-slim
 
 WORKDIR /opt
 
 RUN --mount=type=cache,target=/app/pnpm-store \
+    --mount=type=cache,target=/root/.cache/puppeteer \
     pnpm config set store-dir /app/pnpm-store && \
-    pnpm install puppeteer@10.0.0 && \
-    CHROME_PATH=$(find node_modules/puppeteer/.local-chromium/ -type d -name chrome-linux) && \
-    mv $CHROME_PATH /opt/.local-chromium && \
+    pnpm install puppeteer@21.5.2 && \
+    mv $(find /root/.cache/puppeteer -type d -name chrome-linux64) /opt/.local-chromium && \
     rm -rf node_modules package.json yarn.lock pnpm-lock.yaml
 
 RUN ln -s /opt/.local-chromium/chrome /usr/bin/google-chrome
